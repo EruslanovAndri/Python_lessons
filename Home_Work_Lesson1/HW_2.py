@@ -3,11 +3,10 @@
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 # ⋀ - and ⋁ - or ¬ - not
 
-x = int(input('Enter X = '))
-y = int(input('Enter Y = '))
-z = int(input('Enter Z = '))
-
-if (x != x or y != y or z != z) == x != x and y != y and z != z:
-    print(True)
-   
-
+print('x y z')
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            if (not (x or y or z)) == (not (x and y and z)):
+                print(x, y, z)
+                
