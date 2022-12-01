@@ -7,7 +7,6 @@
 # --> 0 2 3
 # -3 * -1 * 0 = 0
 # Вывод: 0
-
 n = int(input('Введите количество элементов в списке = '))
 list = []
 b = True
@@ -16,7 +15,6 @@ for i in range(-n, n+1):
     list.append(i)  # Добавляем элементы в список
 print()
 print(list)
-
 
 index = input('Укажите индексы через пробел: ')
 div_index = index.split(' ')
