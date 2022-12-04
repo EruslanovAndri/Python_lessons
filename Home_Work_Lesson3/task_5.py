@@ -19,8 +19,11 @@ for i in range(f-2):
     a.append(f3)
 for j in range(len(a)):
     b.append(a[j])
-for k in range(len(b)):
-    b[k] = b[k] * -1
+for k in range(len(b)-1):
+    if not k % 2:
+        b[k] = b[k] * -1
+    else:
+        b[k] = b[k] * 1
 c.append(b[::-1] + a)
 print(c)
 
