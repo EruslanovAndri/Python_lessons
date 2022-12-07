@@ -17,8 +17,8 @@
 # new_lst = []
 # [new_lst.append(i) for i in lst if not i in new_lst]
 # print(new_lst)
-posl = input().split()
+numbers = input('Введите числа через пробел  => ').split()
 answ = []
-for i in posl: 
-        if posl.count(i) == 1: answ.append(i)
+for i in numbers: 
+        if numbers.count(i) == 1: answ.append(i)
 print(*answ) 
