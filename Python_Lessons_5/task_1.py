@@ -42,7 +42,7 @@
 # my_list = [i for i in lst if "абв" not in i]
 # print(*my_list)
 
-my_str = 'Я люблю Джавуабв абви Питон'
-filtered_list = list(filter(lambda word: "абв" not in word, my_str.split(' ')))
+# my_str = 'Я люблю Джавуабв абви Питон'
+# filtered_list = list(filter(lambda word: "абв" not in word, my_str.split(' ')))
     
 
