@@ -32,12 +32,13 @@ def decoded_text(text):
             num = ''
     return res
 
-# with open('text.txt','w') as data:
-#     data.write(encode_text(print_my_message(text)))
+with open('text.txt','w') as data:
+    data.write(encode_text(print_my_message(text)))
 
 
-# with open('text.txt','a') as data:
-#     data.writelines(decoded_text(text))
+with open('text.txt','r') as data:
+    data.read(decoded_text(text))
+    
 print(encode_text(print_my_message(text)))
 print(decoded_text(print_my_message(text)))
 
