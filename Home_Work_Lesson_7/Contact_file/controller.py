@@ -1,5 +1,5 @@
 from data_base import create_new_contact,rewrite_data_base,read_data
-from funcs import print_all_data,delete_contact,search_contact
+from funcs import print_all_data,delete_contact,search_contact,data_to_string,sort_data
 
 def choose_the_option():
     while True:
@@ -15,11 +15,11 @@ def choose_the_option():
             create_new_contact()
             return choose_the_option()
         elif option == '2':
-            print(rewrite_data_base(delete_contact(print_all_data())))
+            rewrite_data_base(delete_contact(data_to_string()))
         elif option == '3':
             print(f'Contact was found =>{search_contact(print_all_data())}')
         elif option == '4':
-            print(print_all_data())
+            print(sort_data(print_all_data()))
         elif option == '7':
             break
 choose_the_option()
