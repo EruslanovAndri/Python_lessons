@@ -14,3 +14,9 @@ def read_data_base():
         return data.read()
 
 
+def conclusion_contact():
+    db = Path('my_data_base.txt')
+    with open(db, 'r',encoding='UTF-8') as data:
+        print('=====================')
+        return print(data.read())
+        
