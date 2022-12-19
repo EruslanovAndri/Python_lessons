@@ -29,9 +29,9 @@ def button_click():
         elif choice == 4:
             print(print_data_base())
         elif choice == 5:
-            export_data_base_txt_format(print_data_base())
+            export_data_base_txt_format(my_list_To_string(read_data_base()))
         elif choice == 6:
-            export_data_base_csv_format(print_data_base())
+            export_data_base_csv_format(my_list_To_string(read_data_base()))
         elif choice == 7:
             print(search_contact_in_data_base(read_data_base())) # DONT WORK
         elif choice == 8:

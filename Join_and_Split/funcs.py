@@ -3,17 +3,20 @@ from data_base import *
 
 
 def my_list_To_string(db: list[str]):
-    my_string = ''
     for i in range(len(db)):
-        my_string += ''.join(db[i])
+        for j in range(len(db[i])):
+            my_string = ''.join(db)
     return my_string
+
 
 def my_string_To_list(db: list[str]):
     my_list = []
     for i in range(len(db)):
-        my_list.append(''.join(db[i]))
-    temp_str = ''.join(my_list)
-    return temp_str
+        for j in range(len(db[i])):
+            temp_str = db[i][j].replace('\n',' ')
+            my_list.append(''.join(temp_str))
+    return my_list
+
 
 def export_data_base_txt_format(db: list[str]):
     str_data_for_export = my_list_To_string(db)
