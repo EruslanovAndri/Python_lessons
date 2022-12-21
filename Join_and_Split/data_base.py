@@ -1,12 +1,15 @@
 from pathlib import Path
 def add_information_in_data_base():
     db = Path('my_data_base.txt')
-    with open(db, 'a', encoding='UTF-8') as data:
-        if data == '':
-            data.write(input('Add new information in the data base => ')+'\n')
+    with open(db, 'r+', encoding='UTF-8') as data:
+        name = input('Enter a name => ')
+        surname = input('Enter a surname => ')
+        telephone = input('Enter a telephone number =>  ')
+        if data.read() == '':
+            data.write(f'{name}\n{surname}\n{telephone}')
         else:
-            data.write(
-                input('\n' + 'Add new information in the data base => ')+'\n\n')
+            data.write(f'\n\n{name}\n{surname}\n{telephone}')
+        
 
 def read_data_base():
     db = Path('my_data_base.txt')

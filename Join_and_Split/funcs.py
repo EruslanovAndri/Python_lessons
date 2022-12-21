@@ -1,5 +1,6 @@
 from pathlib import Path
 from data_base import *
+from prettytable import PrettyTable
 
 
 def my_list_To_string(db: list[str]): #WORK
@@ -9,12 +10,12 @@ def my_list_To_string(db: list[str]): #WORK
     return my_string
 
 
-def my_string_To_list(db: list[str]):# WORK
+def my_string_To_list():  # WORK
     my_list = []
-    for i in range(len(db)):
-        for j in range(len(db[i])):
-            temp_str = db[i][j].replace('\n',' ')
-            my_list.append(''.join(temp_str))
+    temp_list = read_data_base().split('\n\n')
+    for i in temp_list:
+        my_list.append(i.split('\n'))
+    # print(f'List = ',my_list)
     return my_list
 
 
@@ -55,6 +56,15 @@ def sort_data(db): # WORK
         data_list.sort()
     return(data_list)
 
+
+def print_pretty_tables():
+    my_list = my_string_To_list()
+    mytable = PrettyTable(['Name', 'Surname', 'Telephone'])
+    for i in range(len(my_list)):
+        ','.join(my_list[i])
+        mytable.add_row(my_list[i])
+    mytable.add_autoindex('ID')
+    print(mytable)
 
 def delete_contact_from_data_base(list_data_base: list[str]): # DON'T WORK
     contact = input('Напините имя контакта, который необходимо удалить => ').lower()
