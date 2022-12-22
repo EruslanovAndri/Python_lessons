@@ -1,6 +1,8 @@
 from pathlib import Path
 from data_base import *
 from prettytable import PrettyTable
+# from logger import logger_
+from funcs import *
 
 
 def my_list_To_string(db: list[str]): #WORK
@@ -33,7 +35,7 @@ def export_data_base_csv_format(db: list[str]): # WORK
         export_data.write(str_data_for_export)
     return str_data_for_export
 
-def search_contact_in_data_base(db: list[str]): # WORK
+def search_contact_in_data_base(db: list, find_contact: str): # WORK
     contact = input('Напишите имя контакта => ')
     for i in range(len(db)):
         for j in range(len(db[i])):
@@ -57,8 +59,8 @@ def sort_data(db): # WORK
     return(data_list)
 
 
-def print_pretty_tables():
-    my_list = my_string_To_list()
+def print_pretty_tables(): # Work
+    my_list = sort_data(my_string_To_list())
     mytable = PrettyTable(['Name', 'Surname', 'Telephone'])
     for i in range(len(my_list)):
         ','.join(my_list[i])
@@ -66,16 +68,16 @@ def print_pretty_tables():
     mytable.add_autoindex('ID')
     print(mytable)
 
-def delete_contact_from_data_base(list_data_base: list[str]): # DON'T WORK
-    contact = input('Напините имя контакта, который необходимо удалить => ').lower()
-    dict_for_search = {}
-    for i in range(len(list_data_base)):
-        if contact in list_data_base[i]:
-            dict_for_search = list_data_base[i]
-    print(dict_for_search)
-    while(key_:= int(input('Выберете номер контакта, который необходимо удалить => '))) not in dict_for_search:
-        print('Некорктный ввод!')
-    else:
-        list_data_base.remove(dict_for_search[key_])
-    return list_data_base
+# def delete_contact_from_data_base(db: str):
+#     contact = search_contact_in_data_base(my_string_To_list(),db)
+#     data_list = my_string_To_list()
+#     if len(contact) != 0:
+#         while (key_:= int(input('Enter a number of contact for datele => '))) not in contact:
+#             print('There is no such contact in the book. Try one more time => ')
+#         else:
+#             # logger_(''.join(data_list[key_]))
+#             data_list.remove(contact[key_])
+#     return data_list
+
 # print(delete_contact_from_data_base(read_data_base()))
+

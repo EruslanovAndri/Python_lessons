@@ -1,15 +1,15 @@
-asdf
-ert
-34567
+A
+A
+1
 
-rrrr
-tttt
-55555555
+B
+B
+2
 
-Max
-Mironov
-7777777
+B
+B
+3
 
-КККК
-НННН
-8888
+A
+B
+5

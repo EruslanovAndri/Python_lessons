@@ -1,13 +1,7 @@
-from funcs import read_data_base,my_list_To_string,my_string_To_list,print_data_base,export_data_base_txt_format,export_data_base_csv_format,search_contact_in_data_base,delete_contact_from_data_base,sort_data,print_pretty_tables
+from funcs import read_data_base,my_list_To_string,my_string_To_list,print_data_base,export_data_base_txt_format,export_data_base_csv_format,search_contact_in_data_base,sort_data,print_pretty_tables
 from data_base import *
 
 def button_click():
-    # print('Напишите вариант 1 или 2 в зависимости от необхидимого результата.')
-    # print('Вариант номер 1 - Преобразовывает список со строками в строку.')
-    # print('Вариант номер 2 - Преобразовывает строку в список строк.')
-    # print('Вариант номер 3 - Добавить новую информацию в базу данных.')
-    # print('Вариант номер 4 - Принт базу данных.')
-    # print('Вариант номер 5 - Выход.')
     while True:
         print('Напишите вариант 1 или 2 в зависимости от необхидимого результата.')
         print('Вариант номер 1 - Преобразовывает список со строками в строку.')
@@ -41,7 +35,7 @@ def button_click():
         elif choice == 9:
             conclusion_contact()
         elif choice == 10:
-            print_pretty_tables()
+           print_pretty_tables()
         elif choice == 11:
             break
 
