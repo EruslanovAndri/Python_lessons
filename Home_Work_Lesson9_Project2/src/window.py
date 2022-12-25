@@ -46,11 +46,13 @@ class Ui_MainWindow(object):
         self.toolBar = QtWidgets.QToolBar(MainWindow)
         self.toolBar.setObjectName("toolBar")
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.click_on_the_button_start()
+        # self.add_url()
         
         
 
@@ -64,7 +66,10 @@ class Ui_MainWindow(object):
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
 
     def click_on_the_button_start(self):
-        self.Start.clicked.connect(download_video_to_the_folder())
+        self.Start.clicked.connect(download_video_to_the_folder)
+
+#     def add_url(self):
+#         self.commandLinkButton.clicked.connect(user_input_link)
 
 
 if __name__ == "__main__":

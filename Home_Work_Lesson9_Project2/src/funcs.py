@@ -20,10 +20,3 @@ def download_video_to_the_folder(user_link,path_to_folder):
 
 
 download_video_to_the_folder(user_input_link(),get_path_to_folder_download_video())
-
-
-
-
-# link = 'https://www.youtube.com/watch?v=ZwQxlBoTZto'
-# path = '/Users/eruslanovandrey/Python_lessons/Home_Work_Lesson9_Project2/src/download_video'
-#    /Users/eruslanovandrey/Python_lessons/Home_Work_Lesson9_Project2/src/download_video
