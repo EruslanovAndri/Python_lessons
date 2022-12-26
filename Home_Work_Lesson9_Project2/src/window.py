@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from funcs import *
+from funcs import get_path_to_folder_download_video,user_input_link,download_video_to_the_folder
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -47,14 +48,8 @@ class Ui_MainWindow(object):
         self.toolBar.setObjectName("toolBar")
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
         
-
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-        self.click_on_the_button_start()
-        # self.add_url()
-        
-        
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -64,13 +59,6 @@ class Ui_MainWindow(object):
         self.commandLinkButton.setText(_translate("MainWindow", "URL"))
         self.commandLinkButton_2.setText(_translate("MainWindow", "Path to folder"))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
-
-    def click_on_the_button_start(self):
-        self.Start.clicked.connect(download_video_to_the_folder)
-
-#     def add_url(self):
-#         self.commandLinkButton.clicked.connect(user_input_link)
-
 
 if __name__ == "__main__":
     import sys
