@@ -2,7 +2,7 @@ from pytube import YouTube
 
 def user_input_link():
     # link  = input('Add your URL-link => ')
-    link = 'https://www.youtube.com/watch?v=ZwQxlBoTZto'
+    link = ''
     user_link = link
     return user_link
 
@@ -22,7 +22,7 @@ def download_audio(link, path):
     t.download(path, filename='first_audio.mp3')
     print("Аудио успешно загружено")
 
-link = user_input_link()
-path = get_path_to_folder_download_video()
-download_video_to_the_folder(link,path)
+# link = user_input_link()
+# path = get_path_to_folder_download_video()
+# download_video_to_the_folder(link,path)
 
